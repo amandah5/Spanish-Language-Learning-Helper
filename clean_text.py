@@ -1,15 +1,17 @@
 
 import re
 
-# Lowercase, scrap punctuation, & get rid of any extra whitespace/newline
+
 def normalized(sentence):
+    """Lowercase, scrap punctuation, and get rid of any extra whitespace/newline characters."""
     sentence = sentence.lower()
     sentence = re.sub(r"[.,':;!?]", "", sentence)
     sentence = sentence.strip()
     return sentence
 
-# Replace Spanish diacritic characters
+
 def no_diacritics(sentence):
+    """Replace Spanish diacritic characters."""
     for char in sentence:
         destroy_me = ["ü", "ñ", "é", "á", "í", "ó", "ú"]
         add_me = ["u", "n", "e", "a", "i", "o", "u"]

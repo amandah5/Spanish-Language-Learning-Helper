@@ -14,8 +14,8 @@
   * Tokenize
   * POS tag
   * Lemmatize
-* Generate 2 sets of feedback: one with "hints" that cues the user as to what errors they made with extra info on POS, and one with "giveaways" that explicitly lists the incorrect tokens.
-* If the user's input matches the accurate translation perfectly (after normalizing, which has taken away diacritics and punctuation), the only thing that will be in the feedback would be an indication of success.
+* Generate 2 sets of feedback: one with "hints" that cue the user as to what errors they made with extra info on POS, and one with "giveaways" that explicitly lists the incorrect tokens.
+* If the user's input matches the accurate translation perfectly (after normalizing, which has taken away diacritics and punctuation), the only thing that will be in the feedback string is an indication of success.
 * If the user has all the right tokens (including the correct number of duplicates for words/tokens that appear more than once in the sentence), but they are scrambled in some way, the only feedback for the user will be that the word order is incorrect.
 * Otherwise, to address actual errors:
   * Minimum edit distance (MED) generates a list of edits that the user would need to make to correct their translation.
@@ -57,6 +57,6 @@ THE RIGHT ANSWER:  Su jefe le dijo que quería escribir otro informe.
 
 **LIMITATIONS**
 * This is just an introductory project and will not successfully address complex errors in user input.
-* Substitutions, as indicated by MED, have proven problematic oftentimes, because the program may not accurately match up words that should actually correspond.
+* Substitutions, as indicated by MED, are often problematic, because the program may not accurately match up words that should actually correspond.
 * MED is at the token level, not character level. So if a user types "juggo" instead of "juego", they will be punished exactly the same as if they were to type something like "manzana" instead of "juego".
 
