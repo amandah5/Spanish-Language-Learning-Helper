@@ -29,7 +29,7 @@ def get_random_sentence():
 
 
 def simulate():
-    """Explain here"""
+    """Walk through an English sentence, user translation input, and generated feedback."""
     english_input = get_random_sentence()
     correct_spanish = translate(english_input)
     print("ENGLISH SENTENCE TO TRANSLATE: ", english_input)
