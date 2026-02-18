@@ -53,7 +53,7 @@ def simulate():
 
 def generate_feedback(accurate_tokens, accurate_tags, accurate_lemmas, attempt_tokens, attempt_tags, attempt_lemmas,
                       user, correct, pos_map):
-    """Explain here"""
+    """Create sequences of feedback based on word order, extra/missing words, gender/plurality agreement, etc."""
     hint_feedback = []
     giveaway_feedback = []
     attempt_tags = [pos_map.get(tag, tag) for tag in attempt_tags]
